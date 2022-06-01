@@ -1,4 +1,4 @@
-Capstone #2
+Modelling steel strength based off composition and temperature
 ==============================
 
 Predicting steel strength from steel chemistry
