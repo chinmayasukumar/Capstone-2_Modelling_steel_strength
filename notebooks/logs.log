@@ -1517,3 +1517,43 @@ NoneType: None
 2023-07-03 16:50:55,846:WARNING:No coef_ found. Trying feature_importances_
 2023-07-03 16:50:56,098:INFO:Visual Rendered Successfully
 2023-07-03 16:50:56,247:INFO:plot_model() successfully completed......................................
+2023-07-03 16:54:50,387:INFO:Initializing plot_model()
+2023-07-03 16:54:50,387:INFO:plot_model(plot=feature_all, fold=None, verbose=True, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:54:50,388:INFO:Checking exceptions
+2023-07-03 16:54:50,419:INFO:Preloading libraries
+2023-07-03 16:54:50,429:INFO:Copying training dataset
+2023-07-03 16:54:50,429:INFO:Plot type: feature_all
+2023-07-03 16:54:50,470:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:54:50,645:INFO:Visual Rendered Successfully
+2023-07-03 16:54:50,801:INFO:plot_model() successfully completed......................................
+2023-07-03 16:55:24,438:INFO:Initializing plot_model()
+2023-07-03 16:55:24,438:INFO:plot_model(plot=feature_all, fold=None, verbose=True, display=None, display_format=None, estimator=LGBMRegressor(random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:55:24,438:INFO:Checking exceptions
+2023-07-03 16:55:24,447:INFO:Preloading libraries
+2023-07-03 16:55:24,463:INFO:Copying training dataset
+2023-07-03 16:55:24,464:INFO:Plot type: feature_all
+2023-07-03 16:55:24,499:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:55:24,747:INFO:Visual Rendered Successfully
+2023-07-03 16:55:25,048:INFO:plot_model() successfully completed......................................
+2023-07-03 16:55:35,407:INFO:Initializing plot_model()
+2023-07-03 16:55:35,407:INFO:plot_model(plot=residuals, fold=None, verbose=True, display=None, display_format=None, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:55:35,408:INFO:Checking exceptions
+2023-07-03 16:55:35,443:INFO:Preloading libraries
+2023-07-03 16:55:35,528:INFO:Copying training dataset
+2023-07-03 16:55:35,528:INFO:Plot type: residuals
+2023-07-03 16:55:35,754:INFO:Fitting Model
+2023-07-03 16:55:35,771:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/base.py:450: UserWarning: X does not have valid feature names, but ExtraTreesRegressor was fitted with feature names
+  warnings.warn(
+
+2023-07-03 16:55:36,031:INFO:Scoring test/hold-out set
+2023-07-03 16:55:36,603:INFO:Visual Rendered Successfully
+2023-07-03 16:55:36,835:INFO:plot_model() successfully completed......................................
+2023-07-03 16:55:44,774:INFO:Initializing plot_model()
+2023-07-03 16:55:44,774:INFO:plot_model(plot=feature_all, fold=None, verbose=True, display=None, display_format=None, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=123), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:55:44,774:INFO:Checking exceptions
+2023-07-03 16:55:44,811:INFO:Preloading libraries
+2023-07-03 16:55:44,840:INFO:Copying training dataset
+2023-07-03 16:55:44,840:INFO:Plot type: feature_all
+2023-07-03 16:55:44,913:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:55:45,146:INFO:Visual Rendered Successfully
+2023-07-03 16:55:45,404:INFO:plot_model() successfully completed......................................
