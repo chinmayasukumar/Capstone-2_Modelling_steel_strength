@@ -1274,3 +1274,94 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 2023-07-03 15:33:19,863:INFO:_display_container: 2
 2023-07-03 15:33:19,864:INFO:[<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, LGBMRegressor(random_state=123), ExtraTreesRegressor(n_jobs=-1, random_state=123)]
 2023-07-03 15:33:19,864:INFO:compare_models() successfully completed......................................
+2023-07-03 16:38:39,038:INFO:Initializing evaluate_model()
+2023-07-03 16:38:39,039:INFO:evaluate_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None)
+2023-07-03 16:38:39,170:INFO:Initializing plot_model()
+2023-07-03 16:38:39,173:INFO:plot_model(plot=pipeline, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:38:39,173:INFO:Checking exceptions
+2023-07-03 16:38:39,183:INFO:Preloading libraries
+2023-07-03 16:38:39,206:INFO:Copying training dataset
+2023-07-03 16:38:39,206:INFO:Plot type: pipeline
+2023-07-03 16:38:39,477:INFO:Visual Rendered Successfully
+2023-07-03 16:38:39,614:INFO:plot_model() successfully completed......................................
+2023-07-03 16:38:44,328:INFO:Initializing plot_model()
+2023-07-03 16:38:44,328:INFO:plot_model(plot=parameter, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:38:44,329:INFO:Checking exceptions
+2023-07-03 16:38:44,332:INFO:Preloading libraries
+2023-07-03 16:38:44,333:INFO:Copying training dataset
+2023-07-03 16:38:44,334:INFO:Plot type: parameter
+2023-07-03 16:38:44,367:INFO:Visual Rendered Successfully
+2023-07-03 16:38:44,557:INFO:plot_model() successfully completed......................................
+2023-07-03 16:38:45,866:INFO:Initializing plot_model()
+2023-07-03 16:38:45,867:INFO:plot_model(plot=residuals, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:38:45,867:INFO:Checking exceptions
+2023-07-03 16:38:45,874:INFO:Preloading libraries
+2023-07-03 16:38:45,875:INFO:Copying training dataset
+2023-07-03 16:38:45,876:INFO:Plot type: residuals
+2023-07-03 16:38:46,107:INFO:Fitting Model
+2023-07-03 16:38:46,121:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/catboost/core.py:1411: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  self._init_pool(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, weight,
+
+2023-07-03 16:38:46,160:INFO:Scoring test/hold-out set
+2023-07-03 16:38:47,281:INFO:Visual Rendered Successfully
+2023-07-03 16:38:47,476:INFO:plot_model() successfully completed......................................
+2023-07-03 16:38:49,116:INFO:Initializing plot_model()
+2023-07-03 16:38:49,117:INFO:plot_model(plot=error, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:38:49,117:INFO:Checking exceptions
+2023-07-03 16:38:49,121:INFO:Preloading libraries
+2023-07-03 16:38:49,124:INFO:Copying training dataset
+2023-07-03 16:38:49,124:INFO:Plot type: error
+2023-07-03 16:38:49,243:INFO:Fitting Model
+2023-07-03 16:38:49,244:INFO:Scoring test/hold-out set
+2023-07-03 16:38:49,245:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/catboost/core.py:1411: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  self._init_pool(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, weight,
+
+2023-07-03 16:38:55,655:INFO:Visual Rendered Successfully
+2023-07-03 16:38:55,760:INFO:plot_model() successfully completed......................................
+2023-07-03 16:38:57,272:INFO:Initializing plot_model()
+2023-07-03 16:38:57,273:INFO:plot_model(plot=feature, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=<catboost.core.CatBoostRegressor object at 0x7f8c93c47460>, feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:38:57,273:INFO:Checking exceptions
+2023-07-03 16:38:57,277:INFO:Preloading libraries
+2023-07-03 16:38:57,278:INFO:Copying training dataset
+2023-07-03 16:38:57,279:INFO:Plot type: feature
+2023-07-03 16:38:57,280:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:38:57,475:INFO:Visual Rendered Successfully
+2023-07-03 16:38:57,591:INFO:plot_model() successfully completed......................................
+2023-07-03 16:39:00,349:INFO:Initializing evaluate_model()
+2023-07-03 16:39:00,349:INFO:evaluate_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, estimator=LGBMRegressor(random_state=123), fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None)
+2023-07-03 16:39:00,398:INFO:Initializing plot_model()
+2023-07-03 16:39:00,398:INFO:plot_model(plot=pipeline, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=LGBMRegressor(random_state=123), feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:39:00,398:INFO:Checking exceptions
+2023-07-03 16:39:00,402:INFO:Preloading libraries
+2023-07-03 16:39:00,428:INFO:Copying training dataset
+2023-07-03 16:39:00,428:INFO:Plot type: pipeline
+2023-07-03 16:39:00,616:INFO:Visual Rendered Successfully
+2023-07-03 16:39:00,732:INFO:plot_model() successfully completed......................................
+2023-07-03 16:39:02,856:INFO:Initializing plot_model()
+2023-07-03 16:39:02,856:INFO:plot_model(plot=feature, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=LGBMRegressor(random_state=123), feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:39:02,856:INFO:Checking exceptions
+2023-07-03 16:39:02,860:INFO:Preloading libraries
+2023-07-03 16:39:02,872:INFO:Copying training dataset
+2023-07-03 16:39:02,872:INFO:Plot type: feature
+2023-07-03 16:39:02,873:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:39:03,077:INFO:Visual Rendered Successfully
+2023-07-03 16:39:03,245:INFO:plot_model() successfully completed......................................
+2023-07-03 16:39:05,422:INFO:Initializing evaluate_model()
+2023-07-03 16:39:05,422:INFO:evaluate_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=123), fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None)
+2023-07-03 16:39:05,464:INFO:Initializing plot_model()
+2023-07-03 16:39:05,464:INFO:plot_model(plot=pipeline, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=123), feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:39:05,464:INFO:Checking exceptions
+2023-07-03 16:39:05,519:INFO:Preloading libraries
+2023-07-03 16:39:05,569:INFO:Copying training dataset
+2023-07-03 16:39:05,569:INFO:Plot type: pipeline
+2023-07-03 16:39:05,710:INFO:Visual Rendered Successfully
+2023-07-03 16:39:05,856:INFO:plot_model() successfully completed......................................
+2023-07-03 16:39:07,341:INFO:Initializing plot_model()
+2023-07-03 16:39:07,342:INFO:plot_model(plot=feature, fold=KFold(n_splits=10, random_state=None, shuffle=False), verbose=False, display=None, display_format=None, estimator=ExtraTreesRegressor(n_jobs=-1, random_state=123), feature_name=None, fit_kwargs={}, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.regression.oop.RegressionExperiment object at 0x7f8c93431e80>, system=True)
+2023-07-03 16:39:07,342:INFO:Checking exceptions
+2023-07-03 16:39:07,384:INFO:Preloading libraries
+2023-07-03 16:39:07,414:INFO:Copying training dataset
+2023-07-03 16:39:07,415:INFO:Plot type: feature
+2023-07-03 16:39:07,416:WARNING:No coef_ found. Trying feature_importances_
+2023-07-03 16:39:07,574:INFO:Visual Rendered Successfully
+2023-07-03 16:39:07,691:INFO:plot_model() successfully completed......................................
