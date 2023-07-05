@@ -1,4 +1,4 @@
-Modelling steel strength based off composition and temperature
+Predicting Steel Strength: A Regression based Approach
 ==============================
 
 Predicting steel strength from steel chemistry
