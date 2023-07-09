@@ -1557,3 +1557,193 @@ NoneType: None
 2023-07-03 16:55:44,913:WARNING:No coef_ found. Trying feature_importances_
 2023-07-03 16:55:45,146:INFO:Visual Rendered Successfully
 2023-07-03 16:55:45,404:INFO:plot_model() successfully completed......................................
+2023-07-07 17:54:38,825:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:54:38,826:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:54:38,826:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:54:38,826:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:59:53,878:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:59:53,878:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:59:53,878:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 17:59:53,878:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-07 19:14:33,090:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:33,098:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:33,099:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/816350709.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:33,111:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/816350709.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:33,112:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/816350709.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:40,440:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:40,443:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:40,445:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1131443872.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:40,459:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1131443872.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:40,459:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1131443872.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:47,742:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:47,743:WARNING:<>:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:14:47,745:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/2874015781.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:47,760:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/2874015781.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:14:47,760:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/2874015781.py:10: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [14, 15, 16]
+
+2023-07-07 19:19:34,647:WARNING:<>:9: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:19:34,649:WARNING:<>:9: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+
+2023-07-07 19:19:34,650:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1555628929.py:9: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [1, 2, 3]
+
+2023-07-07 19:19:34,667:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1555628929.py:9: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [1, 2, 3]
+
+2023-07-07 19:19:34,668:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1555628929.py:9: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  [1, 2, 3]
+
+2023-07-07 19:27:32,277:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/712089138.py:4: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  row_exists = np.any(np.all(row == X_train, axis=1))
+
+2023-07-07 19:31:59,463:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1635283910.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  X_sub[:5] == X_train[:,5]
+
+2023-07-07 19:32:04,962:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1228554896.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  X_sub[:,5] == X_train[:,5]
+
+2023-07-07 19:32:28,170:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/896239792.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  X_sub[:,4] == X_train[:,4]
+
+2023-07-07 20:15:00,130:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/4074306625.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  indices = np.where(np.all(X_train == X_sub, axis=(2, )))
+
+2023-07-07 20:15:09,118:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/2579431020.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  indices = np.where(np.all(X_train == X_sub))
+
+2023-07-07 20:15:13,084:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1699653960.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  indices = np.where(np.all(X_train == X))
+
+2023-07-07 20:15:16,207:WARNING:/var/folders/mh/9l7f5q2x0bsc05929xvm2nnh0000gn/T/ipykernel_80841/1556591045.py:1: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  indices = np.where(np.all(X_train == X_mask))
+
+2023-07-09 12:32:33,725:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:42,248:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:42,994:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:43,558:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:44,104:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:44,631:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:45,104:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:45,569:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:46,036:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:46,558:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:47,040:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:47,605:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:48,081:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:48,548:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:32:49,014:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:21,889:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:22,433:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:23,480:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:24,376:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:25,004:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:26,096:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:26,854:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:28,296:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:29,131:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:29,824:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:30,501:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:31,101:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:31,798:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:32,378:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 12:33:32,964:WARNING:/Users/chinmayasukumar/opt/anaconda3/lib/python3.9/site-packages/sklearn/ensemble/_voting.py:528: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+2023-07-09 14:14:38,484:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-09 14:14:38,485:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-09 14:14:38,485:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-09 14:14:38,485:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
