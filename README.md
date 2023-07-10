@@ -36,12 +36,64 @@ The package pycaret was used to perform a preliminary search to find the top mod
 
 The CatBoost Regressor, Light Gradient Boosting Machine and Extra Trees Regressor were chosen to be input into a Voting Regressor. In the report, the feature importances of all 3 models is found in the report. Vanadium was common in the CatBoost and XT models while Molybdenum, Nickel and Manganese were common to all three. The LGBM model did put quite a bit of importance on temperature which isn't ideal since most of the samples were pulled at temperates >25˚C.
 
+### Ensemble Model
+
+From these three models, an ensemble Voting Regressor model was built. The weighted average of the prediction from each regressor is the final prediction from this model.
+The weights were determined by iteratively assigning a weight (between 0 and 0.9) to each model, similar to a grid search, and retrieving the evaluation metrics from each iteration. Using this method, the optimal weights were 0.7, 0.1 and 0.2 corresponding to CAT, LGBM and XT respectively. 
+
+```python
+# Initialize empty lists for CatBoost weights
+# Initialize empty lists for CatBoost weights
+weights1 = []
+
+# Initialize empty list for LGBM weights
+weights2 = []
+
+# Initialize empty list for ExtraTrees weights
+weights3 = []
+
+# Empty list for scoring
+scores = []
+
+# All weights range (0.1,0.9)
+
+# Looping through CatBoost weights
+for i in np.arange(0.1,1,0.1):
+    
+    # Looping through LGBM weights
+    for j in np.arange(0.1,1,0.1):
+        
+        # Looping through ExtraTrees weights
+        for k in np.arange(0.1,1,0.1):
+            
+            # Initializing VotingRegressor with to be determined weights
+            vote_reg = VotingRegressor([('cat', cat), ('lgbm', best_lgbm), ('xt', best_xt)], weights = [i,j,k])
+            # Fitting onto training data
+            vote_reg.fit(X_train, y_train)
+            # Getting prediction
+            y_pred = vote_reg.predict(X_test)
+            # Getting r2 score
+            score = r2_score(y_pred, y_test)
+            
+            # Appending scores and weights to respective lists
+            scores.append(score)
+            weights1.append(i)
+            weights2.append(j)
+            weights3.append(k)
+```
+
+Below the metrics of the individual model as well as the ensemble model.
+
+
 Shown below is the method the Voting Regressor used for predictions
 
 ![](./reports/images/ensemble_map.png)
 
-The weighted average of the prediction from each regressor is the final prediction from this model.
 
+
+![](./reports/images/metrics_vote_reg.png)
+
+The model The low weght 
 
 Project Organization
 ------------
