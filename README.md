@@ -28,15 +28,20 @@ Four elements, Vanadium (v), Molybdenum (mo), Nickel (ni) and Manganese (mn) pla
 
 ## Modelling
 
-The package pycaret was used to perform a preliminary search to find the top models to perform the regression. The models from this analysis would be fed into an ensemble Voting Regressor. This is a summary of the models that were tested using pycaret and their corresponding metrics:
+The package pycaret was used to perform a preliminary search to find the top models to perform the regression. The models from this analysis would be fed into an ensemble Voting Regressor. The models with the best overall performance were
 
-![](./reports/images/pycaret_summary.png)
+1. CatBoost Regressor (CAT)
+2. Light Gradient Boosting Machine (LGBM)
+3. ExtraTrees Regressor (XT)
 
-The CatBoost Regressor, Light Gradient Boosting Machine and Extra Trees Regressor were chosen to be input into a Voting Regressor. In the report, the feature importances of all 3 models is found in the report. Vanadium was common in the CatBoost and XT models while Molybdenum, Nickel and Manganese were common to all three. The LGBM model did put quite a bit of importance on temperature which isn't ideal. 
+The CatBoost Regressor, Light Gradient Boosting Machine and Extra Trees Regressor were chosen to be input into a Voting Regressor. In the report, the feature importances of all 3 models is found in the report. Vanadium was common in the CatBoost and XT models while Molybdenum, Nickel and Manganese were common to all three. The LGBM model did put quite a bit of importance on temperature which isn't ideal since most of the samples were pulled at temperates >25˚C.
 
-Shown below is the method the Voting Regressor uses to predict.
+Shown below is the method the Voting Regressor used for predictions
 
-![](.reports/images/ensemble_map.png)
+![](./reports/images/ensemble_map.png)
+
+The weighted average of the prediction from each regressor is the final prediction from this model.
+
 
 Project Organization
 ------------
