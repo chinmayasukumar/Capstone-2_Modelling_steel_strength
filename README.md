@@ -1,7 +1,28 @@
-Predicting Steel Strength: A Regression based Approach
+Predicting Steel Strength: A Regression-based Machine Learning Approach
 ==============================
 
-Predicting steel strength from steel chemistry
+_Steel, primarily made from Iron is one of the most important and ubiqutous materials in modern society. In this project, an Emnsemble Regressor, a machine learning model, was developed to predict the strength of a steel sample based on its chemsitry and temperature.
+Predicting steel strength from steel chemistry_
+
+## Data
+
+Data was obtained from a now unavailble datadaset on Kaggle 
+[Steel dataset](https://www.kaggle.com/datasets/rohannemade/mechanical-properties-of-low-alloy-steels?resource=download)
+
+The data ha 618 observations. Each of these correspond to a steel sample being pulled at a certain temperatur. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chsoen to be the target variable so the others were dropped from the dataset.
+
+![](./reports/images/data_summary.png)
+
+
+## EDA
+
+The correlations between the featues and yield strength are shows below:
+
+![](
+
+## Method
+
+An ensemble model of 
 
 Project Organization
 ------------
