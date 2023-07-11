@@ -1,4 +1,6 @@
-Predicting Steel Strength: A Regression-based Machine Learning Approach
+# Project Summary:
+
+# Predicting Steel Strength: A Regression-based Machine Learning Approach
 ==============================
 
 _Steel, primarily made from Iron is one of the most important and ubiqutous materials in modern society. In this project, an Emnsemble Regressor, a machine learning model, was developed to predict the strength of a steel sample based on its chemsitry and temperature.
@@ -38,22 +40,22 @@ The CatBoost Regressor, Light Gradient Boosting Machine and Extra Trees Regresso
 
 ### Ensemble Model
 
-From these three models, an ensemble Voting Regressor model was built. The weighted average of the prediction from each regressor is the final prediction from this model.
-The weights were determined by iteratively assigning a weight (between 0 and 0.9) to each model, similar to a grid search, and retrieving the evaluation metrics from each iteration. Using this method, the optimal weights were 0.7, 0.1 and 0.2 corresponding to CAT, LGBM and XT respectively. 
+From these three models, an ensemble Voting Regressor model was built. The model returns a prediction that is the weighted average of the predictions from the three baxe models. The weighted average of the prediction from each regressor is the final prediction from this model. The weights were determined by iteratively assigning a weight (between 0 and 0.9) to each model, similar to a grid search, and retrieving the evaluation metrics from each iteration. Using this method, the optimal weights discovered were 0.3, 0.6 and 0.1 corresponding to CAT, LGBM and XT respectively. This path was chosen because the power in this meta-model comes from its diversity. Any predictions from one model that suffers wheen predicting on one particular section of data can be compensated by the predictions of the other two. It is also more flexible when predicting on different types of data. 
 
 ```python
+# Weights will be assigned iteratively to each model in a Voting Regressor to discover the most accurate model
+
 # Initialize empty lists for CatBoost weights
-# Initialize empty lists for CatBoost weights
-weights1 = []
+weights1 = list()
 
 # Initialize empty list for LGBM weights
-weights2 = []
+weights2 = list()
 
 # Initialize empty list for ExtraTrees weights
-weights3 = []
+weights3 = list()
 
 # Empty list for scoring
-scores = []
+mae_loss = list()
 
 # All weights range (0.1,0.9)
 
@@ -67,33 +69,51 @@ for i in np.arange(0.1,1,0.1):
         for k in np.arange(0.1,1,0.1):
             
             # Initializing VotingRegressor with to be determined weights
-            vote_reg = VotingRegressor([('cat', cat), ('lgbm', best_lgbm), ('xt', best_xt)], weights = [i,j,k])
+            vote_reg = VotingRegressor([('cat', cat), ('lgbm', lgbm), ('xt', best_xt)], weights = [i,j,k])
             # Fitting onto training data
             vote_reg.fit(X_train, y_train)
-            # Getting prediction
+            # Getting predictions
             y_pred = vote_reg.predict(X_test)
-            # Getting r2 score
-            score = r2_score(y_pred, y_test)
+            # Getting MAE
+            mae_loss = mean_absolute_error(y_pred, y_test)
             
             # Appending scores and weights to respective lists
-            scores.append(score)
+            loss.append(mae_loss)
             weights1.append(i)
             weights2.append(j)
             weights3.append(k)
 ```
 
-Below the metrics of the individual model as well as the ensemble model.
-
-
-Shown below is the method the Voting Regressor used for predictions
+Shown below is the a diagram of the Voting Regressor structure
 
 ![](./reports/images/ensemble_map.png)
 
 
+The metrics of each individual model as well as the ensemble Voting Regressor is shown below.
 
 ![](./reports/images/metrics_vote_reg.png)
 
-The model The low weght 
+
+## Conclusions
+
+
+LGBM contributes 60% to the ensemble model, placing a balanced importance on important elements. It relies on temperature first and foremost but still performs well. Extra Trees has a limited contribution, possibly due to overfitting. Default CatBoost outperforms Voting Regressor, but the latter is still chosen as the final model since it will be more generalizable to new datasets. 
+
+For this business use case, both MAE and RMSE are used to judge the model's performance. Metallurgists need only a rough estimate of steel performance. The Voting Regressor ensemble model had an MAE of ~14.2 MPa, RMSE of ~30 MPa, and an R2 of 0.96. Considering the mean Yield strength of the set is 361 MPa, its performance is excellent for this use case.
+
+An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, All observations recorded at 27˚C were indexed. Using this index, new X and y datasets were created. These new sets were also removed of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
+
+
+
+
+
+
+
+ 
+
+When scored on the new test and validation data, the model still performed quite well. It’s MAE was ~27 MPa which is similar to the MAE obtained from training on the data from all temperatures even though the R2 did decrease to 0.91. However, the CV MAE when subsetting for 27˚C was higher than the CV MAE when the data from all temperatures was included (~27 MPa vs. ~14 MPa). 
+
+
 
 Project Organization
 ------------
