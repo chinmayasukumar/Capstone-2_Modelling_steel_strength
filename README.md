@@ -12,11 +12,14 @@ Predicting steel strength from steel chemistry_
 Data was obtained from a now unavailble datadaset on Kaggle 
 [Steel dataset](https://www.kaggle.com/datasets/rohannemade/mechanical-properties-of-low-alloy-steels?resource=download)
 
-The dataset has 618 observations. Each of these correspond to a steel sample being pulled at a certain temperature. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chsoen to be the target variable so the others were dropped from the dataset. The sample below is the data after cleaning and removing unneccesary features:
+The dataset has 618 observations. Each of these correspond to a steel sample being pulled at a certain temperature. The machines that performs this strength test, a universal testing machine is shown below. It gathers this data by determining the force (and the resulting stress) required to pull a material up to failure. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chsoen to be the target variable so the others were dropped from the dataset. The sample below is the data after cleaning and removing unneccesary features:
 
 A temperature range was chosen between 25˚C and 450˚C. 
 
 ![](./reports/images/data_summary.png)
+
+
+
 
 
 ## EDA
@@ -103,6 +106,8 @@ For this business use case, both MAE and RMSE are used to judge the model's perf
 
 An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, All observations recorded at 27˚C were indexed. Using this index, new X and y datasets were created. These new sets were also removed of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
 
+
+![](/reports/images/metrics_27.png)
 
 
 
