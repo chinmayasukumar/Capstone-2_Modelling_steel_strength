@@ -16,16 +16,16 @@ The dataset has 618 observations. Each of these correspond to a steel sample bei
 
 A temperature range was chosen between 25˚C and 450˚C. 
 
-![](/reports/images/utm.png)
+![](/reports/figures/utm.png)
 
-![](./reports/images/data_summary.png)
+![](/reports/figures/data_summary.png)
 
 
 ## EDA
 
 The correlations between the featues and yield strength are shows below:
 
-![](./reports/images/correlation_map.png)
+![](/reports/figures/correlation_map.png)
 
 Four elements, Vanadium (v), Molybdenum (mo), Nickel (ni) and Manganese (mn) play a big positive role in determining strength. Temperature also plays a huge role in negatively influencing strength which is expected as higher temperatures allow for easier movement of dislocations.
 
@@ -88,12 +88,12 @@ for i in np.arange(0.1,1,0.1):
 
 Shown below is the a diagram of the Voting Regressor structure
 
-![](./reports/images/ensemble_map.png)
+![](./reports/figures/ensemble_map.png)
 
 
 The metrics of each individual model as well as the ensemble Voting Regressor is shown below.
 
-![](./reports/images/metrics_vote_reg.png)
+![](./reports/figures/metrics_vote_reg.png)
 
 
 ## Discussion and Conclusion
@@ -106,7 +106,7 @@ For this business use case, both MAE and RMSE are used to judge the model's perf
 An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, All observations recorded at 27˚C were indexed. Using this index, new X and y datasets were created. These new sets were also removed of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
 
 
-[](/reports/images/metrics_27.png)
+[](/reports/figures/metrics_27.png)
 
 
 
