@@ -16,17 +16,16 @@ The dataset has 618 observations. Each of these correspond to a steel sample bei
 
 A temperature range was chosen between 25˚C and 450˚C. 
 
-![](./reports/images/data_summary.png)
+![](/reports/figures/utm.png)
 
-
-
+![](/reports/figures/data_summary.png)
 
 
 ## EDA
 
 The correlations between the featues and yield strength are shows below:
 
-![](./reports/images/correlation_map.png)
+![](/reports/figures/correlation_map.png)
 
 Four elements, Vanadium (v), Molybdenum (mo), Nickel (ni) and Manganese (mn) play a big positive role in determining strength. Temperature also plays a huge role in negatively influencing strength which is expected as higher temperatures allow for easier movement of dislocations.
 
@@ -89,15 +88,15 @@ for i in np.arange(0.1,1,0.1):
 
 Shown below is the a diagram of the Voting Regressor structure
 
-![](./reports/images/ensemble_map.png)
+![](./reports/figures/ensemble_map.png)
 
 
 The metrics of each individual model as well as the ensemble Voting Regressor is shown below.
 
-![](./reports/images/metrics_vote_reg.png)
+![](./reports/figures/metrics_vote_reg.png)
 
 
-## Conclusions
+## Discussion and Conclusion
 
 
 LGBM contributes 60% to the ensemble model, placing a balanced importance on important elements. It relies on temperature first and foremost but still performs well. Extra Trees has a limited contribution, possibly due to overfitting. Default CatBoost outperforms Voting Regressor, but the latter is still chosen as the final model since it will be more generalizable to new datasets. 
@@ -107,7 +106,7 @@ For this business use case, both MAE and RMSE are used to judge the model's perf
 An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, All observations recorded at 27˚C were indexed. Using this index, new X and y datasets were created. These new sets were also removed of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
 
 
-![](/reports/images/metrics_27.png)
+[](/reports/figures/metrics_27.png)
 
 
 
@@ -118,21 +117,22 @@ An evaluation was done on a subset of the data at a temperature of 27˚C (around
 
 When scored on the new test and validation data, the model still performed quite well. It’s MAE was ~27 MPa which is similar to the MAE obtained from training on the data from all temperatures even though the R2 did decrease to 0.91. However, the CV MAE when subsetting for 27˚C was higher than the CV MAE when the data from all temperatures was included (~27 MPa vs. ~14 MPa). 
 
+Due to the reasons specified above, the final model was chosoen to be the ensemble Voting Regressor. 
+
+
+
 
 
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
@@ -140,34 +140,9 @@ Project Organization
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
 
 --------
 
