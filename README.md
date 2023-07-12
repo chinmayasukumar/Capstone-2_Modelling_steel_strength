@@ -9,7 +9,7 @@ Predicting steel strength from steel chemistry_
 
 ## Data
 
-Data was obtained from a now unavailble datadaset on Kaggle 
+Data was obtained from a now unavailable dataset on Kaggle 
 [Steel dataset](https://www.kaggle.com/datasets/rohannemade/mechanical-properties-of-low-alloy-steels?resource=download)
 
 The dataset has 618 observations. Each of these correspond to a steel sample being pulled at a certain temperature. The machines that performs this strength test, a universal testing machine is shown below. It gathers this data by determining the force (and the resulting stress) required to pull a material up to failure. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chsoen to be the target variable so the others were dropped from the dataset. The sample below is the data after cleaning and removing unneccesary features:
