@@ -8211,3 +8211,13 @@ ValueError: min_samples_split must be an integer greater than 1 or a float in (0
           nan -23.53168457 -28.69259327 -21.04606927 -20.12555356]
   warnings.warn(
 
+2023-07-12 09:44:12,326:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-12 09:44:12,329:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-12 09:44:12,329:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-12 09:44:12,329:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-07-12 09:51:37,674:INFO:Initializing load_model()
+2023-07-12 09:51:37,683:INFO:load_model(model_name=/Users/chinmayasukumar/Documents/Capstone Projects/Capstone-2_Modelling_streel_strength/models/best_xt.h5, platform=None, authentication=None, verbose=True)
