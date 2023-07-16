@@ -1,18 +1,17 @@
-# Project Summary:
+## Brief Summary:
 
 # Predicting Steel Strength: A Regression-based Machine Learning Approach
 ==============================
 
-_Steel, primarily made from Iron is one of the most important and ubiqutous materials in modern society. In this project, an Emnsemble Regressor, a machine learning model, was developed to predict the strength of a steel sample based on its chemsitry and temperature.
-Predicting steel strength from steel chemistry_
+_Steel, primarily made from iron, is one of the most important and ubiquitous materials in modern society. In this project, an Ensemble Regressor, a machine learning model, was developed to predict the strength of a steel sample based on its chemistry and temperature. Predicting steel strength from steel chemistry_
 
 
 ## Data
 
-Data was obtained from a now unavailable dataset on Kaggle 
+Data was obtained from a now unavailable dataset on Kaggle
 [Steel dataset](https://www.kaggle.com/datasets/rohannemade/mechanical-properties-of-low-alloy-steels?resource=download)
 
-The dataset has 618 observations. Each of these correspond to a steel sample being pulled at a certain temperature. The machines that performs this strength test, a universal testing machine is shown below. It gathers this data by determining the force (and the resulting stress) required to pull a material up to failure. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chsoen to be the target variable so the others were dropped from the dataset. The sample below is the data after cleaning and removing unneccesary features:
+The dataset has 618 observations. Each of these corresponds to a steel sample being pulled at a certain temperature. The machine that performs this strength test, a universal testing machine, is shown below. It gathers this data by determining the force (and the resulting stress) required to pull a material up to failure. The sample's strength parameters (Tensile, Yield, Reduction in area, Elongation) are features as well as its chemistry. Yield strength was chosen to be the target variable so the other strength metrics were dropped from the dataset. The sample below is the data after cleaning and removing unnecessary features:
 
 A temperature range was chosen between 25˚C and 450˚C. 
 
@@ -23,26 +22,32 @@ A temperature range was chosen between 25˚C and 450˚C.
 
 ## EDA
 
-The correlations between the featues and yield strength are shows below:
+The correlations between the features and Yield strength are shown below:
 
 ![](/reports/figures/correlation_map.png)
 
-Four elements, Vanadium (v), Molybdenum (mo), Nickel (ni) and Manganese (mn) play a big positive role in determining strength. Temperature also plays a huge role in negatively influencing strength which is expected as higher temperatures allow for easier movement of dislocations.
+Four elements, Vanadium (V), Molybdenum (Mo), Nickel (Ni) and Manganese (Mn) play a big positive role in determining strength. Temperature also plays a huge role in negatively influencing strength which is expected as higher temperatures allow for easier movement of dislocations and thus weaker steel.
+
+
+## Preprocessing
+
+The data was split into training, test and validation sets with a 7:2:1 split respectively. A validation set was created to assess the model’s performance more robustly. All features, X data, were fit and transformed on X_train using a Standard Scaler and were transformed on X_val and X_test. The y data, target variable, was kept as is
 
 
 ## Modelling
 
 The package pycaret was used to perform a preliminary search to find the top models to perform the regression. The models from this analysis would be fed into an ensemble Voting Regressor. The models with the best overall performance were
 
-1. CatBoost Regressor (CAT)
-2. Light Gradient Boosting Machine (LGBM)
-3. ExtraTrees Regressor (XT)
+    CatBoost Regressor (CAT)
+    Light Gradient Boosting Machine (LGBM)
+    ExtraTrees Regressor (XT)
 
-The CatBoost Regressor, Light Gradient Boosting Machine and Extra Trees Regressor were chosen to be input into a Voting Regressor. In the report, the feature importances of all 3 models is found in the report. Vanadium was common in the CatBoost and XT models while Molybdenum, Nickel and Manganese were common to all three. The LGBM model did put quite a bit of importance on temperature which isn't ideal since most of the samples were pulled at temperates >25˚C.
+The CatBoost Regressor (CAT), Light Gradient Boosting Machine (LGBM) and Extra Trees Regressor (XT) were chosen to be input into a Voting Regressor. The feature importance of all 3 models is found in the report. Vanadium was a common influencing factor in the CAT and XT models while molybdenum, nickel and manganese had a large influence in all three. The LGBM model did put quite a bit of importance on temperature which isn't ideal since most of the samples were pulled at temperatures >25˚C.
+
 
 ### Ensemble Model
 
-From these three models, an ensemble Voting Regressor model was built. The model returns a prediction that is the weighted average of the predictions from the three baxe models. The weighted average of the prediction from each regressor is the final prediction from this model. The weights were determined by iteratively assigning a weight (between 0 and 0.9) to each model, similar to a grid search, and retrieving the evaluation metrics from each iteration. Using this method, the optimal weights discovered were 0.3, 0.6 and 0.1 corresponding to CAT, LGBM and XT respectively. This path was chosen because the power in this meta-model comes from its diversity. Any predictions from one model that suffers wheen predicting on one particular section of data can be compensated by the predictions of the other two. It is also more flexible when predicting on different types of data. 
+From these three models, an ensemble Voting Regressor model was built. The model returns a  weighted average of the predictions from each of the three base models, which is the final prediction. The weights were determined by iteratively assigning a weight (between 0 and 0.9) to each model, similar to a grid search, and retrieving the evaluation metrics from each iteration. Using this method, the optimal weights discovered were 0.3, 0.6 and 0.1 corresponding to CAT, LGBM and XT respectively. This strategy was chosen since the power in this meta-model comes from its diversity. Any predictions from one model that suffer when predicting one particular section of data can be compensated for by the predictions of the other two. It is also more flexible when predicting based on different types of data.
 
 ```python
 # Weights will be assigned iteratively to each model in a Voting Regressor to discover the most accurate model
@@ -99,11 +104,11 @@ The metrics of each individual model as well as the ensemble Voting Regressor is
 ## Discussion and Conclusion
 
 
-LGBM contributes 60% to the ensemble model, placing a balanced importance on important elements. It relies on temperature first and foremost but still performs well. Extra Trees has a limited contribution, possibly due to overfitting. Default CatBoost outperforms Voting Regressor, but the latter is still chosen as the final model since it will be more generalizable to new datasets. 
+LGBM contributes 60% to the ensemble model, placing a balanced importance on the influential  elements. It relies on temperature first and foremost but still performs well. Extra Trees has a limited contribution, possibly due to overfitting. Default CatBoost outperforms the Voting Regressor, but the latter is still chosen as the final model since it will be more generalizable to new data.
 
-For this business use case, both MAE and RMSE are used to judge the model's performance. Metallurgists need only a rough estimate of steel performance. The Voting Regressor ensemble model had an MAE of ~14.2 MPa, RMSE of ~30 MPa, and an R2 of 0.96. Considering the mean Yield strength of the set is 361 MPa, its performance is excellent for this use case.
+For this business use case, both MAE and RMSE are used to judge the model's performance. Metallurgists need only a rough estimate of steel performance. The Voting Regressor ensemble model socred an MAE of ~14 MPa, RMSE of ~28 MPa, and an R2 of 0.96 when cross-validating. Considering the mean Yield strength of the set is 361 MPa, its performance is excellent for this use case.
 
-An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, All observations recorded at 27˚C were indexed. Using this index, new X and y datasets were created. These new sets were also removed of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
+An evaluation was done on a subset of the data at a temperature of 27˚C (around room temperature). Firstly, all observations recorded at 27˚C were indexed. Using this index, new X and Y datasets were created. These new sets were also cleared of any training data. To reiterate, the resulting dataset (25 observations) was comprised exclusively of test and validation data recorded at 27˚C. The results are shown below:
 
 
 [](/reports/figures/metrics_27.png)
@@ -115,12 +120,9 @@ An evaluation was done on a subset of the data at a temperature of 27˚C (around
 
  
 
-When scored on the new test and validation data, the model still performed quite well. It’s MAE was ~27 MPa which is similar to the MAE obtained from training on the data from all temperatures even though the R2 did decrease to 0.91. However, the CV MAE when subsetting for 27˚C was higher than the CV MAE when the data from all temperatures was included (~27 MPa vs. ~14 MPa). 
+When scored on the new test and validation data, the model still performed quite well during cross-validation. Its MAE was ~27 MPa, RMSE was ~39 MPa and R2 was 0.91 which is lower than the results when the model was fitted to all the data but still quite usable.
 
-Due to the reasons specified above, the final model was chosoen to be the ensemble Voting Regressor. 
-
-
-
+Due to the reasons specified above, the final model was chosen to be the ensemble Voting Regressor.
 
 
 Project Organization
