@@ -118,7 +118,6 @@ An evaluation was done on a subset of the data at a temperature of 27˚C (around
 
 
 
- 
 
 When scored on the new test and validation data, the model still performed quite well during cross-validation. Its MAE was ~27 MPa, RMSE was ~39 MPa and R2 was 0.91 which is lower than the results when the model was fitted to all the data but still quite usable.
 
