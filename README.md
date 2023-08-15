@@ -104,7 +104,7 @@ The metrics of each individual model as well as the ensemble Voting Regressor is
 ## Discussion and Conclusion
 
 
-LGBM contributes 60% to the ensemble model, placing a balanced importance on the influential  elements. It relies on temperature first and foremost but still performs well. Extra Trees has a limited contribution, possibly due to overfitting. Default CatBoost outperforms the Voting Regressor, but the latter is still chosen as the final model since it will be more generalizable to new data.
+Both XT and CAT weigh a high importance on the elements that are the most correlated with steel strength. They also don’t place as much importance on temperature which, as mentioned, isn’t a very important feature. This ties in to the highest contributing features of LGBM. Even though it places a high importance on LGBM, it does weigh the other elements as important as well more equally than XT or CAT which is beneficial since XT’s predictions are very reliant on Vanadium and less so for the other elements. Accuracy using these models could be an issue for datasets that don’t contain as much Vanadium especially because many of the samples do not contain Vanadium.  Even though the Voting Regressor is marginally less accurate than XT, the latter was still chosen as the final model since it's be more generalizable to new data as mentioned above.
 
 For this business use case, both MAE and RMSE are used to judge the model's performance. Metallurgists need only a rough estimate of steel performance. The Voting Regressor ensemble model socred an MAE of ~14 MPa, RMSE of ~28 MPa, and an R2 of 0.96 when cross-validating. Considering the mean Yield strength of the set is 361 MPa, its performance is excellent for this use case.
 
